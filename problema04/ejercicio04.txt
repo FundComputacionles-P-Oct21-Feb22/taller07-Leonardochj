@@ -1,0 +1,53 @@
+Generar una solución que permita ingresar jugadores de fútbol; por cada jugador se debe solicitar:
+Nombre el jugador
+Posición en el campo de juego
+Edad
+Estatura
+
+El ciclo de ingreso de información deberá terminar cuando el usuario lo decida. Se debe imprimer el siguiente reporte (usar una cadena de acumulación):
+
+Listado de Jugadores:
+Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+Xavier Arreaga -Defensa-, edad 24, estatura 1.85
+Moisés Caicedo -Mediocentro-, edad 19, estatura 1.88
+Ángel Mena -Delantero-, edad 32, estatura 1.75
+Michael Estrada -Delantero-, edad 27, estatura 1.93 Promedio de edades: 26.8 Promedio de estaturas: 1.87
+
+1) Inicio
+2) nombre_jugador d[0, n]
+3) posicion_campo d[0, n]
+4) edad i[0, n]
+5) estatura i[0, n]
+6) promedio_edades d[0, n] 
+7) promedio_estaturas d[0, n]
+8) suma_edad i[0, n] <-- 0 
+9) suma_estatura i[0, n] <--0
+10)acumulador <--""
+
+11) Escribir "Ingresar nombre del jugador"
+   Lea nombre_jugador
+12) Escribir "Ingresar la posición en el campo de juego"
+   Lea posición_campo
+13)Escribir "Ingresar la edad del jugador"
+   Lea edad
+14)Escribir "Ingresar la estatura del jugador"
+   Lea estatura
+
+15)Haga_Hasta
+16)Escribir edad
+17)suma_edad <-- suma_edad + edad
+18)Fin Haga_Hasta ("suma_edad"! == "si") // "No"!="Si"/ verdadero // "Si"!="Si"/falso
+
+19)Haga_Hasta
+20)Escribir estatura
+21)suma_estatura <-- suma_estatura + estatura
+22)Fin Haga_Hasta ("suma_estatura"! == "si") // "No"!="Si"/ verdadero // "Si"!="Si"/falso
+
+23)promedio_edades <-- suma_edad
+24)promedio_estatura <-- suma_estatura
+
+25)acumulador <-- nombre_jugador + "+" + posición_campo + "+" + edad + "+" + estatura
+26)Escribir acumulador // {nombre_jugador + posicion_campo + edad + estatura}
+27)Escribir promedio_edades
+28)Escribir promedio_estatura
+29)Fin   
